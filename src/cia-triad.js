@@ -1,5 +1,5 @@
 import { html, render } from "lit-html";
-import cia from "/Cia-triad.png";
+import cia from "/cia-triad.png";
 import { ref } from "lit-html/directives/ref.js";
 
 const sections = {
@@ -141,9 +141,9 @@ const ciaTriadTemplate = () => html`
         ${Object.entries(sections).map(
           ([key, { title, focus }]) => html`
             <li
-              class="cia-triad__list-item${
-                selectedSection === key ? " is-active" : ""
-              }"
+              class="cia-triad__list-item${selectedSection === key
+                ? " is-active"
+                : ""}"
               data-section=${key}
               @click=${() => renderDetails(key)}
               @keydown=${(event) => handleKeydown(event, key)}
